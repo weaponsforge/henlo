@@ -1,6 +1,6 @@
 {
   "name": "@weaponsforge/henlo",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Testing publishing an executable Node file",
   "main": "henlo.js",
   "scripts": {
