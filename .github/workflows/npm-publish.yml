@@ -1,0 +1,30 @@
+# This workflow publishes a NodeJS package to npm when a release is created
+# It also deploys the "latest" and tag development Docker image to Docker Hub
+
+name: Publish to NPM
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish-npm:
+    name: Publish to NPM Registry
+    if: github.event.release.target_commitish == 'main'
+    runs-on: ubuntu-latest
+    needs: run-tests
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.release.tag_name }}
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20.15.0
+          registry-url: https://registry.npmjs.org/
+      - run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
