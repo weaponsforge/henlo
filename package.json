@@ -1,5 +1,5 @@
 {
-  "name": "henlo",
+  "name": "@weaponsforge/henlo",
   "version": "1.0.1",
   "description": "Testing publishing an executable Node file",
   "main": "henlo.js",
