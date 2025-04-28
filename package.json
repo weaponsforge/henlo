@@ -1,6 +1,7 @@
 {
-  "name": "@weaponsforge/henlo",
+  "name": "henlo",
   "version": "1.0.1",
+  "description": "Testing publishing an executable Node file",
   "main": "henlo.js",
   "scripts": {
     "start": "node henlo.js"
@@ -8,7 +9,19 @@
   "bin": {
     "henlo": "henlo.js"
   },
-  "author": "weaponsforge",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weaponsforge/henlo.git"
+  },
+  "keywords": [
+    "henlo",
+    "hello",
+    "hello-world"
+  ],
+  "author": "weaponsforgee",
   "license": "MIT",
-  "description": "Testing publishing an executable Node file"
+  "bugs": {
+    "url": "https://github.com/weaponsforge/henlo/issues"
+  },
+  "homepage": "https://github.com/weaponsforge/henlo#readme"
 }
