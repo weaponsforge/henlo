@@ -1,0 +1,14 @@
+{
+  "name": "@weaponsforge/henlo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node henlo.js"
+  },
+  "bin": {
+    "henlo": "henlo.js"
+  },
+  "author": "weaponsforge",
+  "license": "MIT",
+  "description": "Testing publishing an executable Node file"
+}
